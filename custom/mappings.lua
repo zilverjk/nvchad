@@ -16,8 +16,8 @@ M.customs = {
     ["K"] = { ":m '<-2<CR>gv=gv" }
   },
   n = {
-    ["d"] = { '"_d'},
-    ["x"] = { '"_x'},
+    ["d"] = { '"_d' },
+    ["x"] = { '"_x' },
 
     ["<leader>rr"] = { "<cmd> set rnu! <CR>", "Toggle relative number" },
 
@@ -41,14 +41,6 @@ M.customs = {
       end,
       "Close buffers to the right"
     },
-  }
-}
-
-M["nvim-cmp"] = {
-  plugin = true,
-  n = {
-    ["<Tab>"] = "",
-    ["<S-tab>"] = "",
   }
 }
 
@@ -123,4 +115,3 @@ M.lspconfig = {
 }
 
 return M
-
