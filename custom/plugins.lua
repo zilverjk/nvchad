@@ -1,5 +1,14 @@
 local plugins = {
   {
+    "nosduco/remote-sshfs.nvim",
+    dependencies = { 'nvim-telescope/telescope.nvim' },
+    lazy = false,
+    config = function()
+      require("remote-sshfs").setup()
+      require('telescope').load_extension 'remote-sshfs'
+    end
+  },
+  {
     "karb94/neoscroll.nvim",
     lazy = false,
     config = function()
@@ -61,7 +70,7 @@ local plugins = {
     "nvimtools/none-ls.nvim",
     dependencies = { "nvimtools/none-ls-extras.nvim" },
     event = { "BufReadPre", "BufNewFile" },
-    opts = function()
+    config = function()
       require "custom.configs.none-ls"
     end
   },
@@ -80,8 +89,8 @@ local plugins = {
         "graphql-language-service-cli",
         "tailwindcss-language-server",
         "js-debug-adapter",
-        "eslint-lsp",
-        "prettier"
+        "prettier",
+        "eslint_d"
       }
     }
   },
@@ -189,6 +198,7 @@ local plugins = {
   },
   {
     "folke/todo-comments.nvim",
+    lazy = false,
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {},
   },
