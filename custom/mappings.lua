@@ -41,6 +41,13 @@ M.customs = {
       end,
       "Close buffers to the right"
     },
+
+    -- Window Management
+    ["<leader>sv"] = { "<C-w>v", "Split window vertically" },
+    ["<leader>sh"] = { "<C-w>s", "Split window horizontally" },
+    ["<leader>se"] = { "<C-w>=", "Split window equal width & height" },
+    ["<leader>sx"] = { ":close<CR>", "Close current split window" },
+
   }
 }
 
